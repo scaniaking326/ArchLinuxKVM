@@ -3,7 +3,7 @@ This is a guide how to install KVM and QEMU on Arch Linux
 
 Please follow this steps carefully !
 
-This install of KVM and QENU skips some unneeded packages like virt-viewer libguestfs and vim
+This install of KVM skips some unneeded packages like virt-viewer libguestfs and vim
 
 1. Check if you have a virualization enabled
 
@@ -19,6 +19,7 @@ sudo pacman -Syyu
 3. Install KVM and QEMU packages
 
 sudo pacman -S qemu-full virt-manager dnsmasq bridge-utils vde2 openbsd-netcat ebtables
+
 Download size should be around 136 Megabytes
 
 If you get conflict warning say YES to remove package in conflict
@@ -38,18 +39,14 @@ Save modified file (Control+O) and exit nano (Control+X)
 
 sudo usermod -aG libvirt $USER
 
-or
-
 sudo usermod -aG libvirt (username)
 
 6. Start services
 
 sudo systemctl enable libvirtd.service virtlockd.socket virtlogd.socket libvirtd.socket libvirtd-ro.socket libvirtd-admin.socket virtlockd-admin.socket virtlogd-admin.socket
 
-and 
-
 sudo systemctl start libvirtd.service virtlockd.socket virtlogd.socket libvirtd.socket libvirtd-ro.socket libvirtd-admin.socket virtlockd-admin.socket virtlogd-admin.socket
 
-7. You are done
+7. Done
 
-Use virt-manager icon to use KVM
+Use virt-manager to use KVM
