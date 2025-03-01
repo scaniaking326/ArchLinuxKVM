@@ -5,7 +5,7 @@ Please follow this steps carefully !
 
 This install of KVM will skip some unneeded packages like virt-viewer libguestfs and vim
 
-1. Check if you have a virualization enabled
+1. Check if you have a virtualization enabled
 
 grep -Ec '(vmx|svm)' /proc/cpuinfo
 
