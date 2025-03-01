@@ -31,6 +31,7 @@ sudo nano /etc/libvirt/libvirtd.conf
 Find (Control+F) and uncomment this two lines by removing POUND (#) character
 
 #unix_sock_group = "libvirt"
+
 #unix_sock_rw_perms = "0770"
 
 Save modified file (Control+O) and exit nano (Control+X)
