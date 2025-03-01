@@ -3,7 +3,7 @@ This is a guide how to install KVM and QEMU on Arch Linux
 
 Please follow this steps carefully !
 
-This install of KVM skips some unneeded packages like virt-viewer libguestfs and vim
+This install of KVM will skip some unneeded packages like virt-viewer libguestfs and vim
 
 1. Check if you have a virualization enabled
 
