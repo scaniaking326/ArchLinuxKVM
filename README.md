@@ -50,4 +50,4 @@ sudo systemctl start libvirtd.service virtlockd.socket virtlogd.socket libvirtd.
 
 7. Done
 
-Use virt-manager to use KVM from terminal or from apps menu to use KVM
+Use virt-manager from terminal or Virtual Nachine Manager app in menu to use KVM
