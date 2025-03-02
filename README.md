@@ -3,7 +3,7 @@ This is a guide how to install KVM and QEMU on Arch Linux
 
 Please follow this steps carefully !
 
-This install of KVM will skip some unneeded packages like virt-viewer libguestfs and vim
+This install will skip some unneeded packages like virt-viewer libguestfs and vim
 
 1. Check if you have a virtualization enabled
 
@@ -48,6 +48,24 @@ sudo systemctl enable libvirtd.service virtlockd.socket virtlogd.socket libvirtd
 
 sudo systemctl start libvirtd.service virtlockd.socket virtlogd.socket libvirtd.socket libvirtd-ro.socket libvirtd-admin.socket virtlockd-admin.socket virtlogd-admin.socket
 
-7. Done
+8. start NAT network
 
-Use virt-manager from terminal or Virtual Nachine Manager app in menu to use KVM
+List all networks 
+
+sudo virsh net-list --all
+
+Restart firewall
+
+sudo firewall-cmd --reload
+
+Start NAT network
+
+sudo virsh net-start default 
+
+make NAT start at startup 
+
+sudo virsh net-autostart default
+   
+9. Done
+
+Use virt-manager from terminal or Virtual Nachine Manager in app menu to use KVM
